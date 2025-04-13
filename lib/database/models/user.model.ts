@@ -1,4 +1,4 @@
-import { transformationTypes } from "@/constants";
+
 import {Schema , model, models} from "mongoose";
 
 const UserSchema = new Schema({

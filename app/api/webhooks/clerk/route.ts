@@ -71,8 +71,10 @@ export async function POST(req: Request) {
       photo: image_url,
     };
 
+    console.log("[DEBUG] Creating user in DB:", user);
     const newUser = await createUser(user);
-
+    console.log("[DEBUG] DB created user:", newUser);
+    
     // Set public metadata
     if (newUser) {
       await clerkClient.users.updateUserMetadata(id, {
